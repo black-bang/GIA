@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/*UI配色方案*/
+.TabSwitch-BeatTest-28PEa_7qUTwxulEoYDg7ID {
+  width: 100%;
+  background: #ffffff;
+  overflow-x: scroll;
+  flex-wrap: nowrap; }
+  .TabSwitch-BeatTest-28PEa_7qUTwxulEoYDg7ID > .TabSwitch-BeatTest-inner-3ka28skHPi-8UyWgzyB7qi {
+    dispaly: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content: space-between;
+    align-items: center; }
+@charset "UTF-8";
+/*UI配色方案*/
+.TabSwitchItem-Beat-3pmDxUMGC62CGU6aHqpm-e {
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+  color: #999999;
+  border-bottom: rgba(0, 0, 0, 0) 3px solid;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.TabSwitchItem-Beat-active-2DTfgy6xFh8QK48RUXQGUz {
+  color: #04be13;
+  border-bottom: #04be13 3px solid; }
+@charset "UTF-8";
+/*UI配色方案*/
+.TabSwitchButtonItem-Beat-_q1gVL3I6I0zHWrJmSV6j {
+  padding: 5px;
+  font-size: 14px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  color: #04be13;
+  border-radius: 50px;
+  border: #04be13 1px solid;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  dispaly: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  align-items: center; }
+  .TabSwitchButtonItem-Beat-_q1gVL3I6I0zHWrJmSV6j:first-child {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; }
+  .TabSwitchButtonItem-Beat-_q1gVL3I6I0zHWrJmSV6j:last-child {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px; }
+
+.TabSwitchItem-ButtonItem-active-3p7W4cvRO7Z0XssDWpbi0X {
+  color: #ffffff;
+  background: #04be13; }
+@charset "UTF-8";
+/*UI配色方案*/
+.TabSwitchLinkItem-2yYvRGSmrgjggGDHBxayRv {
+  padding: 10px;
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  color: #999999;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-bottom: rgba(0, 0, 0, 0) 3px solid; }
+
+/*# sourceMappingURL=style.css.map*/

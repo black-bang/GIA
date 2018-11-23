@@ -1,0 +1,28 @@
+@import "~publicStyle";
+.HtmlInput{
+	width:200px;
+	position:relative;
+	background:#F2F2F2;
+	&>.HtmlInput-placeholder{
+		z-index:0;
+		line-height:10px;
+		color:#808080;
+		position:absolute;
+		left:10px;top:50%;transform:translateY(-50%);
+	}
+	&>.HtmlInput-placeholder-hide{
+		display:none;
+	}
+	&>.HtmlInput-inputElement{
+		z-index:2;
+		padding:5px 10px;
+		outline:none;
+		border:none;
+		background:none;
+		position:relative;;
+	}
+}
+
+.IMAGE{
+	border:#E6E6E6 1px solid !important;
+}

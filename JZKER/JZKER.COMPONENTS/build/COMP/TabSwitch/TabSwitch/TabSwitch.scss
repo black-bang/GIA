@@ -1,0 +1,12 @@
+@import "~publicStyle";
+
+.TabSwitch-BeatTest{
+	width:100%;
+	background:#ffffff;
+	overflow-x:scroll;	
+	//@include flexRow("between");
+	@include flexWrap("false");
+	&>.TabSwitch-BeatTest-inner{
+		@include flexRow("between");
+	}
+}

@@ -1,0 +1,46 @@
+@import "~publicStyle";
+
+
+.ChatRoom{
+	background:#E6E6E6;
+}
+
+.ChatGroup-chatHistory{
+	height:100%;
+	//background:#FFFFFF;
+	overflow-y:scroll;
+	&>.ChatGroup-chatHistory-inner{
+		//background:#E6E6E6;
+		overflow-y:scroll;
+		&>.chatHistory{
+			text-align:center;
+			&>.time-lable{
+				color:#FFFFFF;
+				font-size:12px;
+				padding:5px 10px;
+				margin:15px auto;
+				margin-bottom:10px;
+				text-align:center;
+				border-radius:4px;
+				display:inline-block;
+				background:rgba(0,0,0,0.1);
+			}
+		}
+	}
+}
+
+.ChatRoom-TabSwitchItem{
+	width:100px;
+	height:20px;
+	position:relative;
+	@include overText();
+}
+.ChatRoom-unReadTip{
+	width:8px;
+	height:8px;
+	border-radius:4px;
+	background:#FF3030;
+	position:absolute;transform:translateY(-50%);
+	right:0px;top:50%;
+}
+

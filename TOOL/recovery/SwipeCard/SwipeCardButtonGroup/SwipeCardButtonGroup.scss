@@ -1,0 +1,7 @@
+@import "~publicStyle";
+
+.SwipeCardButtonGroup{
+	height:100%;
+	@include flexAuto();
+	@include flexRow("between");
+}

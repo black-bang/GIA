@@ -1,0 +1,15 @@
+@import "~publicStyle";
+
+.TabSwitchItem-Beat{
+	padding:10px;
+	font-size:14px;
+	text-align:center;
+	white-space:nowrap;
+	color:$UN_ACTIVE_FOUNT_COLOR;
+	border-bottom:rgba(0,0,0,0) 3px solid;
+	@include flex(1);
+}
+.TabSwitchItem-Beat-active{
+	color:$themeColor;
+	border-bottom:$themeColor 3px solid;
+}

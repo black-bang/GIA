@@ -1,0 +1,12 @@
+@import "../../_public.scss";
+
+.SwipeCard-ButtonGroup-Item{
+	height:100%;
+	color:#FFFFFF;
+	padding:0px 10px;
+	background:#FF8787;
+	@include flexRow("left")
+	&>:nth-child(n){
+		color:#FFFFFF;
+	}
+}

@@ -1,0 +1,20 @@
+@import "~publicStyle";
+
+.SwitchItem-default{
+	padding:10px 15px;
+	white-space:nowrap;
+	&:after{
+		content:"";
+		display:block;
+		margin-bottom:3px;
+	}	
+}
+.SwitchItem-active-default{
+	color:#06bb14;
+	&:after{
+		content:"";
+		display:block;
+		margin-bottom:0px;
+		border-bottom:#06bb14 3px solid;
+	}
+}

@@ -1,0 +1,10 @@
+@import '~publicStyle';
+.ListItem{
+    display: flex;
+    color: #aaa;
+    align-items: center;
+    background: #FBFBFB;
+    justify-content: center;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}

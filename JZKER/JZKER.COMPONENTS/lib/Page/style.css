@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/*UI配色方案*/
+.Page-3kiKVrGU7Nxj-Yto2Fw36V {
+  width: 100%;
+  height: 100%;
+  background: #eeeeee;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  dispaly: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  .Page-3kiKVrGU7Nxj-Yto2Fw36V > div {
+    width: 100%; }
+  .Page-3kiKVrGU7Nxj-Yto2Fw36V > .Page_Middle-2-uvZQX9W8NXZTTA87lVRC {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+
+.PageTransition-appear-zmwTq0ER3CF8YhDbTDGbB {
+  opacity: 0; }
+
+.PageTransition-appear-zmwTq0ER3CF8YhDbTDGbB.PageTransition-appear-active-1Ot3wR3xCnmmXb5vQr4mk3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out; }
+.Page_top_comp-35n6QQhkJroW9ybq51B0Kg {
+  border-bottom: #E6E6E6 1px solid; }
+
+.PageTopSplit-3z1tL-fI_ahS92wXM4_DzN {
+  margin-bottom: 10px; }
+
+/*# sourceMappingURL=style.css.map*/

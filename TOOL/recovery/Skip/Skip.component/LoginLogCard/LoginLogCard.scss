@@ -1,0 +1,28 @@
+@import "~publicStyle";
+
+.LoginLogCard{
+	margin:5px 0px;
+	padding:10px 0px;
+	background:#ffffff;
+	&>.Primary{
+		padding-bottom:10px;
+		@include flexRow("between");
+		&>div{
+			text-align:center;
+			@include flex(1);
+		}
+		&>.Status{
+			
+		}
+		&>.Status-success{
+			color:$Success
+		}
+		&>.Status-pedding{
+			color:$themeColor
+		}
+	}
+	&>.MessageTip{
+		color:#808080;
+		text-align:center;
+	}
+}

@@ -1,0 +1,59 @@
+@import "~publicStyle";
+
+.ChatBar{
+	position:relative;
+	&>.ChatBar-funcBar{
+		min-height:50px;
+		font-size:12px;
+		padding:0px 6px;
+		z-index:98;
+		overflow:hidden;
+		position:relative;
+		background:#FFFFFF;
+		border-top:#E6E6E6 1px solid;
+		@include flexRow("between")
+		&>.Commontext-btn{
+			width:40px;
+			color:#ffffff;
+			background:#06bb14;
+			border:$Success 1px solid;		
+		}
+		&>.ChatInput{
+			width:100%;
+			margin:0px 10px;
+			@include flex(1);
+		}
+		&>.EmitBtn-active{
+			color:#ffffff;
+			background:#06bb14;
+			border:#06bb14 1px solid;
+		}
+		&>.upLoadImg{
+			width:20px;
+			padding:4px;
+			border-radius:36px;
+		}
+	}
+	&>.ChatBar_bottom{
+		height:300px;
+		z-index:98;
+		position:relative;
+		background:#ffffff;
+		transition:height 0.2s ease-out;
+	}	
+}
+
+.ChatBar_bottom_hidden{
+	overflow:hidden;
+	height:0px !important;
+	transition:height 0.2s ease-out;
+}
+
+.ChatBar-blankArea{
+	position:fixed;
+	width:100%;
+	height:100%;
+	z-index:98;
+	top:0px;left:0px;
+	background:rgba(0,0,0,0);
+}

@@ -1,0 +1,11 @@
+@import "~publicStyle";
+
+.TabSwitchLinkItem{
+	padding:10px;
+	display:block;
+	font-size:14px;
+	text-align:center;
+	color:$UN_ACTIVE_FOUNT_COLOR;
+	@include flex(1);
+	border-bottom:rgba(0,0,0,0) 3px solid;	
+}

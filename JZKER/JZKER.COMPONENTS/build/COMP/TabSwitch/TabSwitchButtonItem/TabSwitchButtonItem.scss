@@ -1,0 +1,28 @@
+@import "~publicStyle";
+
+.TabSwitchButtonItem-Beat{
+	//max-width:120px;
+	padding:5px;
+	font-size:14px;
+	position:relative;
+	text-align:center;
+	white-space:nowrap;
+	color:$themeColor;
+	border-radius:50px;
+	border:$themeColor 1px solid;
+	@include flex(1);
+	@include overText();
+	@include flexRow("center");
+	&:first-child{
+		border-top-right-radius:0px;
+		border-bottom-right-radius:0px;
+	}
+	&:last-child{
+		border-top-left-radius:0px;
+		border-bottom-left-radius:0px;
+	}
+}
+.TabSwitchItem-ButtonItem-active{
+	color:#ffffff;
+	background:$themeColor;
+}

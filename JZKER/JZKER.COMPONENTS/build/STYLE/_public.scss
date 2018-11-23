@@ -1,0 +1,103 @@
+/*UI配色方案*/
+$bgColor:#F2F2F2;//背景色
+$fontColor:#4D4D4D;
+$themeColor:#04be13;
+$bgColor:#eeeeee;
+$baseSize:18px;
+
+$UN_ACTIVE_FOUNT_COLOR:#999999;
+$BORDER_COLOR:#E6E6E6;
+
+
+$Info:#5bc0de;
+$Danger:#d9534f;
+$Default:#777777;
+$Primary:#337ab7;
+$Warning:#f0ad4e;
+$Success:#5cb85c;
+
+
+@mixin flex($num){
+	-webkit-box-flex:$num;
+	-moz-box-flex:$num;
+	-webkit-flex:$num;
+	-ms-flex:$num; 
+	flex:$num;
+}
+@mixin flexAuto(){
+	align-self:stretch;//元素被拉伸以适应容器
+}
+@mixin flexRow($align,$item:"center"){
+	dispaly:flex;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	@if($align=="left"){
+		justify-content:flex-start;
+	}@else if($align=="center"){
+		justify-content:center;
+	}@else if($align=="right"){
+		justify-content:flex-end;
+	}@else if($align=="between"){
+		justify-content:space-between;
+	}@else{
+		justify-content:space-around;
+	}
+	@if($item=="top"){
+		align-items:flex-start;
+	}@else if($item=="bottom"){
+		align-items:flex-end;
+	}@else if($item=="center"){
+		align-items:center;
+	}
+}
+@mixin flexCol($just,$item:"center"){
+	dispaly:flex;
+	display:-webkit-flex;
+	flex-direction:column;
+	@if($just=="top"){
+		justify-content:flex-start;
+	}@else if($just=="center"){
+		justify-content:center;
+	}@else if($just=="bottom"){
+		justify-content:flex-end;
+	}@else if($just=="between"){
+		justify-content:space-between;
+	}@else{
+		justify-content:space-around;
+	}
+	@if($item=="end"){
+		align-items:flex-end;
+	}@else if($item=="start"){
+		align-items:flex-start;
+	}@else if($item=="center"){
+		align-items:center;
+	}
+}
+@mixin flexWrap($can){
+	@if($can=="true"){
+		flex-wrap:wrap;
+	}@else{
+		flex-wrap:nowrap;
+	}
+}
+@mixin initLink(){
+	color:#000000;
+	text-decoration:none;
+}
+@mixin overText(){
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;	
+}
+
+@mixin grad($direction,$color1,$color2){
+	background: -webkit-linear-gradient($direction, $color1 , $color2); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient($direction, $color1, $color2); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient($direction, $color1, $color2); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to $direction, $color1 , $color2); /* 标准的语法 */
+}
+
+@mixin blur($value){
+    -webkit-filter: blur($value);
+    filter: blur($value);
+}

@@ -1,0 +1,41 @@
+@import "~publicStyle";
+
+.CommonTextPanel{
+	overflow:hidden;
+	border-radius:5px;
+	background:#FFFFFF;
+	&>.CommonTextPanel-header{
+		padding:10px;
+		text-align:center;
+		background:#E6E6E6;
+		position:relative;
+		&>.CommonTextPanel-header-close{
+			right:20px;top:50%;transform:translateY(-50%);
+			position:absolute;
+		}
+	}
+	&>.CommonTextPanel-textArea{
+		margin:10px;
+		&>.CommonTextPanel-textAreaElement{
+			height:120px;
+			border-radius:5px;
+			background:#E6E6E6;
+		}			
+	}
+	&>.CommonTextPanel-classify{
+		padding:0px 10px;
+		margin-bottom:10px;		
+		&>.classify-title{
+			margin-left:5px;
+			margin-bottom:5px;
+		}		
+	}
+	&>.CommonTextPanel-buttonGroup{
+		padding:0px 10px;
+		@include flexRow("between")
+		&>.save,&>.saveEmit{
+			width:40%;
+			padding:10px;
+		}
+	}
+}

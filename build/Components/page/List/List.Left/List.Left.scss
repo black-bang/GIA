@@ -1,0 +1,20 @@
+@import "~publicStyle";
+
+.Left{
+	padding:8px;
+	display:block;	
+	color:#333333;
+	padding-left:20px;
+	padding-right:20px;
+	background:#ffffff;
+	position:relative;
+ 	@include flexRow("between");
+}
+.Content{
+	min-height:30px;
+	font-size:14px;
+	@include flex(1);
+	@include flexRow("left");
+}
+
+

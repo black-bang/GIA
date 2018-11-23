@@ -1,0 +1,12 @@
+@import "~publicStyle";
+
+.SwipeCardButtonGroupItem{
+	height:100%;
+	color:#ffffff;
+	display:block;
+	padding:0px 10px;
+	white-space:nowrap;
+	background:$themeColor;
+	@include flexRow("center");	
+	&>:nth-child(n){color:#ffffff}
+}

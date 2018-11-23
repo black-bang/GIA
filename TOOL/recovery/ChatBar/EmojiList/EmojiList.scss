@@ -1,0 +1,18 @@
+@import "~publicStyle";
+.EmojiList{
+	margin-top:10px;
+	overflow-y:scroll;
+	@include flexCol("center","center");
+	.EmojiList_inner{
+		width:310px;
+		@include flexRow("left","center");
+		&>div{
+			width:30px;
+			height:30px;
+			padding:4px;
+			&>img{
+				margin:0 !important;
+			}
+		}		
+	}
+}

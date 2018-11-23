@@ -1,0 +1,19 @@
+@import "~publicStyle";
+
+.QuestionDetail-Title{
+	padding:10px;
+	font-size:18px;
+	background:#ffffff;
+	margin:10px 0px;
+	border-bottom:#E6E6E6 1px solid;
+}
+
+.QuestionDetail-content{
+	padding:10px;
+	background:#ffffff;
+}
+
+.QuestionDetail-PageBottom{
+	background:#ffffff;
+	@include flexRow("between")
+}

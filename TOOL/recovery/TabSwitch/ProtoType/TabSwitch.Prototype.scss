@@ -1,0 +1,14 @@
+@import "~publicStyle";
+
+.TabSwitch{
+	&>.TabSwitch-inner{
+		@include flexRow("left");
+	}
+}
+
+.TabSwitchMarquee{
+	width:100%;
+	overflow-x:scroll;	
+	border-bottom:#E6E6E6 1px solid;
+	@include flexWrap("false");
+}

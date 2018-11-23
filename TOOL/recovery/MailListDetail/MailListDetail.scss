@@ -1,0 +1,43 @@
+@import "~publicStyle";
+
+
+.MailListDetail-TopBar{
+	width:100%;
+	top:0px;left:0px;
+	position:fixed;
+	z-index:99;
+	color:#ffffff;
+	border-bottom:none;
+	@include grad(top,rgba(0,0,0,0),rgba(0,0,0,0.5))
+}
+
+.MailListDetail-photoWall{
+	height:200px;
+	position:relative;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	box-shadow:0px 0px 30px #999 inset;
+	&>.EmployeeName{
+		width:100%;
+		font-size:20px;
+		color:#ffffff;
+		font-weight:bold;
+		padding-top:10px;
+		padding-left:20px;
+		padding-bottom:10px;
+		position:absolute;bottom:0px;
+		@include grad(top,rgba(0,0,0,0.5),rgba(0,0,0,0))
+	}
+	&>.photo{
+		position:absolute;
+		left:50%;top:50%;transform:translate(-50%,-50%);
+	}
+}
+
+.MailListDetail-List{
+	margin-top:20px;
+	.ListItem-title{
+		width:70px;
+		margin-right:10px;
+	}
+}

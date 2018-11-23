@@ -1,0 +1,43 @@
+@import "~publicStyle";
+
+.commonText-item{
+	color:#808080;
+	overflow:hidden;
+	position:relative;
+	padding:8px 0px;
+	border-bottom:#E6E6E6 1px solid;
+	@include flexRow("between");
+	&>.CommonTextItem-text{
+		width:100%;
+		font-size:13px;
+		padding:0px 10px;
+		@include flex(1);
+	}
+	&>.CommonTextItem-funcBtn{
+		width:0px;
+		height:30px;
+		padding:0px;
+		overflow:hidden;
+		transition:all 0.1s ease-in;
+		&>.CommonTextItem-buttonGroup{
+			@include flexRow("between");
+			&>.funcBtn-edit,&>.funcBtn-delete{
+				margin:5px;
+			}
+			&>.funcBtn-edit{
+				color:#66AAFF
+			}
+			&>.funcBtn-delete{
+				color:#FF7070
+			}					
+		}
+	}
+	&>.CommonTextItem-funcBtn-show{
+		width:75px;
+		padding:0px 20px;
+		transition:all 0.1s ease-in;
+	}
+}
+.commonText-item:active{
+	background:#E6E6E6;
+}		

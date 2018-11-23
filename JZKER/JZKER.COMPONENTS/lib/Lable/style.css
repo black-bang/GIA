@@ -1,0 +1,75 @@
+.am-icon {
+  fill: currentColor;
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+}
+.am-icon-xxs {
+  width: 15px;
+  height: 15px;
+}
+.am-icon-xs {
+  width: 18px;
+  height: 18px;
+}
+.am-icon-sm {
+  width: 21px;
+  height: 21px;
+}
+.am-icon-md {
+  width: 22px;
+  height: 22px;
+}
+.am-icon-lg {
+  width: 36px;
+  height: 36px;
+}
+.am-icon-loading {
+  -webkit-animation: cirle-anim 1s linear infinite;
+          animation: cirle-anim 1s linear infinite;
+}
+@-webkit-keyframes cirle-anim {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes cirle-anim {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@charset "UTF-8";
+/*UI配色方案*/
+.AppComponent-Lable-2kRRnAJa5tCJjFAqxf1GyI {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  padding: 2px 10px;
+  line-height: 18px;
+  position: relative;
+  display: inline-block; }
+  .AppComponent-Lable-2kRRnAJa5tCJjFAqxf1GyI > .AppComponent-Lable-tip-2NaPJ6lzcaRi9a0_b7O_2- {
+    z-index: 99;
+    color: #ffffff;
+    min-width: 10px;
+    padding: 0px 4px;
+    text-align: center;
+    border-radius: 10px;
+    background: #FF4E4E;
+    transform: scale(0.8);
+    position: absolute;
+    top: -5px;
+    right: -5px; }
+  .AppComponent-Lable-2kRRnAJa5tCJjFAqxf1GyI > .AppComponent-Lable-close-1m-WX6XMnjnVpU_hrw_IBw {
+    border: none !important;
+    background: #ffffff !important;
+    position: absolute;
+    top: -5px;
+    right: -5px; }
+
+.AppComponent-Lable-edit-3OgYAJKMu15h2Bo617kYwZ > .text-2YFjr2A8FwI4oVTiOmEdY4 {
+  opacity: 0.5; }
+
+/*# sourceMappingURL=style.css.map*/

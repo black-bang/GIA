@@ -1,0 +1,30 @@
+@import "~publicStyle";
+
+.List{
+	//margin-bottom:10px;
+	.Title{
+		//margin:0px 20px;
+		padding:10px 20px;
+		background:#ffffff;
+		position:relative;
+		&>.TitleLine{
+			position:absolute;
+			left:20px;right:20px;bottom:0px;
+			border-bottom:#E6E6E6 1px solid;			
+		}
+	}
+	.Line{
+		position:absolute;
+		left:20px;right:20px;bottom:0px;
+		border-bottom:#E6E6E6 1px solid;
+	}	
+	&>:last-child{
+		&>.Line{
+			border-bottom:#ffffff 1px solid !important;
+		}
+	}	
+}
+
+
+
+

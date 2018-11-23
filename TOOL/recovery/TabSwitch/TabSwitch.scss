@@ -1,0 +1,42 @@
+@import "~publicStyle";
+
+.TabSwitch-old{
+	@include flexRow("left")
+	&>div{
+		position:relative;
+		&>.SwitchItem{
+			//padding:10px 0px;
+		}
+		&>.SwitchItemActive:after{
+			content:"";
+			width:100%;
+			position:absolute;left:0px;bottom:0px;
+			border-bottom:$themeColor+#3A3A3A 3px solid;
+		}	
+		&>.SwitchButton{
+			color:#ffffff;
+			padding:0px 10px;
+			background:#c9c9c9;
+		}	
+		&>.SwitchButton{
+			color:#ffffff;
+			font-size:14px;
+			text-align:center;
+			padding:4px 10px;
+			background:#c9c9c9;
+		}	
+		&:first-child>.SwitchButton{
+			border-radius:20px;
+			border-top-right-radius:0px;
+			border-bottom-right-radius:0px;
+		}	
+		&:last-child>.SwitchButton{
+			border-radius:20px;
+			border-top-left-radius:0px;
+			border-bottom-left-radius:0px;
+		}	
+		&>.SwitchButtonActive{
+			background:#06bb14;
+		}
+	}
+}

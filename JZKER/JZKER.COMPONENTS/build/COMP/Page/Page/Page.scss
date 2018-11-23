@@ -1,0 +1,39 @@
+@import "~publicStyle";
+
+
+.Page{
+	width:100%;
+	height:100%;
+	background:$bgColor;
+	overflow:hidden;
+	@include flex(1);
+	@include flexCol("between");
+	&>div{
+		width:100%;	
+	}
+	&>.Page_Top{
+
+	}
+	&>.Page_Middle{
+		width:100%;
+		height:100%;
+		overflow-x:hidden;
+		//overflow-y:hidden;
+		position:relative;
+		@include flex(1);
+	}
+	&>.Page_Bottom{
+		
+	}
+}
+
+.PageTransition-appear {
+ 	opacity:0; 
+  //transform:translateX(100%) 
+}
+
+.PageTransition-appear.PageTransition-appear-active {
+ 	opacity:1; 
+  //transform:translateX(0%);
+  	transition:opacity 0.3s ease-in-out;
+}

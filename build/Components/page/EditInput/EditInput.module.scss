@@ -1,0 +1,46 @@
+@import "~publicStyle";
+
+.EditInput{
+	max-width:240px;//可以响应式调节
+	overflow:hidden;
+	@include flexRow("left");
+	&>.InputShell{
+		text-align:right;
+		@include flex(1)
+		&>.InputElementShell{
+			height:20px;
+			max-width:200px;//可以响应式调节
+			overflow:hidden;
+			padding:0 5px;
+			position:relative;
+			&>.InputElement{
+				width:100%;
+				height:100%;
+				border:none;
+				outline:none;
+				z-index:99;
+				background:none;
+				position:absolute;
+				left:5px;top:0px;bottom:3px;
+				text-align:left;
+			}
+			&>.DisplayText{
+				opacity:0;
+				//white-space:nowrap;	
+			}
+		}	
+		&>.EmptyText{
+			color:#FF6E6E;
+			font-size:12px;
+		}			
+	}
+	&>.TextTool{
+		width:20px;
+		margin-left:10px;
+		@include flexRow("center");
+	}
+}
+
+
+
+

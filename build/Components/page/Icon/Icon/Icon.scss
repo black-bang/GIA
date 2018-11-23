@@ -1,0 +1,26 @@
+@import "~publicStyle";
+
+
+.Icon-Wrap{
+	text-align:center;
+	position:relative;
+	display:inline-block;
+}
+
+.Icon-Inner-Wrap{
+	overflow:hidden;
+	position:relative;
+	display:inline-block;
+}	
+.WeiChatIcon{
+	display:inline-block;
+	transform-origin:0% 0%;
+	position:absolute;
+}
+
+.Icon-children{
+	color:#999999;
+	font-size:12px;
+	text-align:center;
+	word-wrap:break-word;
+}

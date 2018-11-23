@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/*UI配色方案*/
+.SwipeCard-Hp3QWRcfF_8slgtlKpitL {
+  overflow-y: hidden;
+  position: relative; }
+  .SwipeCard-Hp3QWRcfF_8slgtlKpitL > .SwipeCard-content-2f8owKUYWcD_Krbb8ZJYni {
+    z-index: 2;
+    position: relative;
+    transition: all 0.15s ease; }
+  .SwipeCard-Hp3QWRcfF_8slgtlKpitL > .SwipeCard-ButtonGroup-35RzjTbLViKqpa6SO8U0tp {
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transform: translateX(0px);
+    transition: all 0.15s ease; }
+@charset "UTF-8";
+/*UI配色方案*/
+.SwipeCard-ButtonGroup-9i3UbWQPHtFyLvOUa7ciP {
+  height: 100%;
+  dispaly: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  justify-content: flex-start;
+  align-items: center; }
+@charset "UTF-8";
+/*UI配色方案*/
+.SwipeCard-ButtonGroup-Item-338TS9SOiBkGD2lg-E_CF6 {
+  height: 100%;
+  color: #FFFFFF;
+  padding: 0px 10px;
+  background: #FF8787;
+  dispaly: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  justify-content: flex-start;
+  align-items: center; }
+  .SwipeCard-ButtonGroup-Item-338TS9SOiBkGD2lg-E_CF6 > :nth-child(n) {
+    color: #FFFFFF; }
+
+/*# sourceMappingURL=style.css.map*/

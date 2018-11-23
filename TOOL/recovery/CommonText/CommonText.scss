@@ -1,0 +1,36 @@
+@import "~publicStyle";
+	
+.CommonText{
+	height:100%;
+	border-top:#E6E6E6 1px solid;
+	&>.CommonText-classifyLable,&>.CommonText-wrap,&>.CommonText-button{
+		width:100%;
+	}
+	@include flexCol("between");
+	&>.CommonText-wrap{
+		height:100%;
+		overflow-y:scroll;
+		@include flex(1);
+	}
+	&>.CommonText-button{
+		height:40px;
+		@include flexRow("between");
+		&>.addCommon,&>.editBtn{
+			@include flexCol("center")
+		}
+		&>.addCommon{
+			width:100%;
+			height:100%;
+			text-align:center;
+			border-top:#E6E6E6 1px solid;
+			@include flex(1);
+		}
+		&>.editBtn{
+			width:60px;
+			height:100%;
+			text-align:center;
+			border-left:#E6E6E6 1px solid;
+			border-top:#E6E6E6 1px solid;
+		}		
+	}
+}

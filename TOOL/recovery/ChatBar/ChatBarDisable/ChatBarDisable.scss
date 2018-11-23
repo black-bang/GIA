@@ -1,0 +1,46 @@
+@import "~publicStyle";
+
+.ChatBarDisable{
+	$borderColor:#d6d6d6;
+	background:#ffffff;
+	//border-top:$borderColor 1px solid;
+	&>.ChatBarDisable_top{
+		padding:8px;
+		//border-bottom:$borderColor 1px solid;
+		background:#F2F2F2;
+		@include flexRow("between");
+		&>.ChatBarDisable_top_left{
+			width:40px;
+			color:#333333;
+			text-align:center;
+		}
+		&>.ChatBarDisable_top_middle{
+			width:90%;
+			height:100%;
+			padding:0px 10px;
+			&>.ChatBarDisable_input{
+				padding:10px;
+				color:#808080;
+				font-size:15px;
+				border-radius:10px;
+				//background:#E6E6E6;
+				//border:$borderColor 1px solid;
+			}
+			&>.ChatIndex_chatcontent{
+				height:100%
+			}	
+		}
+		&>.ChatBarDisable_top_right{
+			width:54px;
+			&>.ChatBarDisable_emit{
+				background:#56b3f0
+			}
+		}
+	}
+	&>.ChatBarDisable_bottom{
+		height:300px;
+		padding-top:10px;
+		background:#ffffff;
+		transition:height 0.2s ease-out;
+	}
+}

@@ -1,0 +1,20 @@
+@import "./_public.scss";
+
+
+.SwipeCard{
+	overflow-y:hidden;
+	position:relative;
+	&>.SwipeCard-content{
+		z-index:2;
+		position:relative;
+		transition:all 0.15s ease;
+	}
+	&>.SwipeCard-ButtonGroup{
+		height:100%;
+		z-index:1;
+		position:absolute;
+		right:0px;top:0px;
+		transform:translateX(0px);
+		transition:all 0.15s ease;
+	}
+}
