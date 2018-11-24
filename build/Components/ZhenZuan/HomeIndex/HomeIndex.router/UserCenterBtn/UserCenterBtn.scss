@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 927121 */
+  src: url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.eot');
+  src: url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.woff') format('woff'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.svg#iconfont') format('svg');
+}
+
+.HomeTop {
+  font-family: "iconfont";
+  display: flex;
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  & > div {
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 14px;
+      width: 100%;
+      height: 24px;
+      border-radius: 30px;
+      background: #f66;
+      color: #fff;
+      line-height: 24px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  .menu {
+    text-align: left;
+    justify-content: flex-start;
+    margin-left: 5px;
+  }
+  .logo {
+    p {
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin-right: 3px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+.UserCenterBox {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  // position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all linear 0;
+}
+.UserCenterContent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%;
+  background: #fff;
+  z-index: 88888;
+  transition: all linear 0.3s;
+  .ListTop {
+    padding: 10px 0;
+    width: 100%;
+    height: 180px;
+    & > div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 300;
+      font-size: 14px;
+      height: 30px;
+    }
+    .UserPic {
+      height: 60px;
+      margin-top: 30px;
+      span {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        background: #f66;
+        border-radius: 60px;
+        img {
+          width: 100%;
+          height: 100%;
+         border-radius: 60px;
+        }
+      }
+    }
+    .UserNumber {
+      height: 30px;
+      line-height: 30px;
+      font-size: 16px;
+    }
+    .HaveData {
+      span {
+        color: #dc2c41;
+        margin-left: 5px;
+      }
+    }
+    .balance {
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      span {
+        width: 60%;
+        height: 100%;
+        background: #dc2c41;
+        color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+    }
+  }
+  .ListJusity {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 0;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      margin: 10px 20px;
+      overflow: hidden;
+      & > span {
+        font-size: 14px;
+        font-weight: 300;
+        height: 25px;
+        line-height: 25px;
+      }
+    }
+  }
+  .UserMenuList {
+    width: 100%;
+    height: auto;
+    & > div {
+      display: flex;
+      padding: 0 15px;
+      justify-content: flex-start;
+      font-size: 16px;
+      font-family: "iconfont";
+      span {
+        font-size: 18px;
+        margin-right: 5px;
+      }
+    }
+  }
+}

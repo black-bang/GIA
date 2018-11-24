@@ -2,10 +2,10 @@ import "./HomeIndex.router.scss";
 import {Page,TopBar,SelectRegion, Lable, List,SelectDate,BasePicker,SwiperCard} from "component";
 import  ButtonPromise from '../../../page/ButtonPromise/ButtonPromise/ButtonPromise.jsx'
 // import SpanList from "../HomeIndexItem/HomeIndexItem.jsx";
-import ChildList from "../ChildList/ChildList.jsx";
+import ChildList from "./ChildList/ChildList.jsx";
 import classNames from "classnames";
 import url from "url";
-import UserCenter from "../UserCenter/UserCenter.jsx";
+import UserCenterBtn from "./UserCenterBtn/UserCenterBtn.jsx";
 import { Toast } from 'antd-mobile'
 import Input from '../../../page/BaseIput.jsx'
 
@@ -16,11 +16,12 @@ import { inject, observer } from "mobx-react";
 @observer
 class HomeIndexRouter extends React.Component {
   render() {
+    const SearchDetail = this.store.Search;
     return (
       <Page>
         <Page.Top style={{ height: "45px" }}>
           <div className="HomeTop">
-            <UserCenter />
+            <UserCenterBtn />
           </div>
         </Page.Top>
         <div className="Content">
@@ -28,8 +29,9 @@ class HomeIndexRouter extends React.Component {
             <div className="jeweiFace">
               <ChildList
                 data={this.state.TextNumberFace}
+                relation={SearchDetail["shape"]}               
                 onChange={SelectOBJ => {
-                 //console.log(SelectOBJ);
+                  console.log(SelectOBJ)
                   if (SelectOBJ.action == "PUSH") {
                     let originArray = this.state.a;
                     // if (originArray.length == 7) {
@@ -39,16 +41,16 @@ class HomeIndexRouter extends React.Component {
                  
                     originArray.push(SelectOBJ.value);
                     this.setState({ a: originArray });
-                    console.log(originArray);
                   } if (SelectOBJ.action =="SPLICE"){
                     let originArray = this.state.a
                     originArray.splice(originArray.indexOf(SelectOBJ.value), 1);
                     this.setState({ a: originArray });
                   }
-                  console.log(this.state.a)
                   let array = this.state.a
-                  sessionStorage.setItem("Face", JSON.stringify(array));
-                 
+                  let arrayString = array.toString();
+                  const {keyname,keyvalue } = SelectOBJ
+                  this.store.SaveSearchInfo(keyname, arrayString);
+                  sessionStorage.setItem("Face", JSON.stringify(array));               
                 }}
                 value={this.state.a}
               />
@@ -61,18 +63,17 @@ class HomeIndexRouter extends React.Component {
                   if (SelectOBJ.action == "PUSH") {
                     let originArray = this.state.b;
                     originArray.push(SelectOBJ.value);
-                    console.log(originArray);
-                    this.setState({ b: originArray });
+                    this.setState({ b: originArray });                
                   } if (SelectOBJ.action == "SPLICE") {
                     let originArray = this.state.b
-                    console.log(originArray);
                     let spliceState = SelectOBJ.value;
-                    console.log(spliceState);
                     originArray.splice(originArray.indexOf(spliceState),1); 
-                    console.log(originArray);
                     this.setState({ b: originArray });
                   }
                   let array = this.state.b;
+                  let arrayString = array.toString();
+                  const { keyname, keyvalue } = SelectOBJ
+                  this.store.SaveSearchInfo(keyname, arrayString);
                   sessionStorage.setItem("Type", JSON.stringify(array));
                 }}
                 value={this.state.b}
@@ -92,6 +93,9 @@ class HomeIndexRouter extends React.Component {
                     this.setState({ c: originArray });
                   }
                   let array = this.state.c;
+                  let arrayString = array.toString();
+                  const { keyname, keyvalue } = SelectOBJ
+                  this.store.SaveSearchInfo(keyname, arrayString);
                   sessionStorage.setItem("Size", JSON.stringify(array));
                 }}
                 value={this.state.c}
@@ -136,7 +140,7 @@ class HomeIndexRouter extends React.Component {
             <div className="WorkList">
               <ChildList
                 data={this.state.TextNumber_1}
-                onChange={SelectOBJ => {
+                 onChange={SelectOBJ => {
                   this.setState({ d: SelectOBJ.value });
                   if (SelectOBJ.action == "PUSH") {
                     let originArray = this.state.d;
@@ -148,9 +152,54 @@ class HomeIndexRouter extends React.Component {
                     this.setState({ d: originArray });
                   }
                   let array = this.state.d;
+                   let arrayString = array.toString();
+                   const { keyname, keyvalue } = SelectOBJ
+                   this.store.SaveSearchInfo(keyname, arrayString);
                   sessionStorage.setItem("WorkList", JSON.stringify(array));   
                 }}
                 value={this.state.d}
+              />
+              <ChildList
+                data={this.state.TextNumber_1_1}
+                onChange={SelectOBJ => {
+                  this.setState({ d_1: SelectOBJ.value });
+                  if (SelectOBJ.action == "PUSH") {
+                    let originArray = this.state.d_1;
+                    originArray.push(SelectOBJ.value);
+                    this.setState({ d_1: originArray });
+                  } if (SelectOBJ.action == "SPLICE") {
+                    let originArray = this.state.d_1
+                    originArray.splice(originArray.indexOf(SelectOBJ.value), 1)
+                    this.setState({ d_1: originArray });
+                  }
+                  let array = this.state.d_1;
+                  let arrayString = array.toString();
+                  const { keyname, keyvalue } = SelectOBJ
+                  this.store.SaveSearchInfo(keyname, arrayString);
+                  sessionStorage.setItem("WorkList_1", JSON.stringify(array));
+                }}
+                value={this.state.d_1}
+              />
+              <ChildList
+                data={this.state.TextNumber_1_2}
+                onChange={SelectOBJ => {
+                  this.setState({ d_2: SelectOBJ.value });
+                  if (SelectOBJ.action == "PUSH") {
+                    let originArray = this.state.d_2;
+                    originArray.push(SelectOBJ.value);
+                    this.setState({ d_2: originArray });
+                  } if (SelectOBJ.action == "SPLICE") {
+                    let originArray = this.state.d_2
+                    originArray.splice(originArray.indexOf(SelectOBJ.value), 1)
+                    this.setState({ d_2: originArray });
+                  }
+                  let array = this.state.d_2;
+                  let arrayString = array.toString();
+                  const { keyname, keyvalue } = SelectOBJ
+                  this.store.SaveSearchInfo(keyname, arrayString);
+                  sessionStorage.setItem("WorkList_2", JSON.stringify(array));
+                }}
+                value={this.state.d_2}
               />
             </div>
             <div className="RightTitle">{"荧光"}</div>
@@ -158,16 +207,17 @@ class HomeIndexRouter extends React.Component {
               <ChildList
                 data={this.state.Singer_1}
                 onChange={SelectOBJ => {
-                  console.log(SelectOBJ);
                   if (SelectOBJ.action == "PUSH") {
                     this.setState({ e: SelectOBJ.value })
                     let array = SelectOBJ.value;
                     sessionStorage.setItem("Light", JSON.stringify(array));
                   }if (SelectOBJ.action == "SPLICE") {
                     this.setState({ e: '' })
-                  }
-                  let array = this.state.e;
-                  sessionStorage.setItem("Light", JSON.stringify(array));             
+                  } 
+                  let array=this.state.e
+                  let arrayString = array.toString();
+                  const { keyname, keyvalue } = SelectOBJ
+                  this.store.SaveSearchInfo(keyname, arrayString);          
                 }}
                 value={this.state.e}
               />
@@ -184,6 +234,10 @@ class HomeIndexRouter extends React.Component {
                   } if (SelectOBJ.action == "SPLICE") {
                     this.setState({ f: '' })
                   }
+                  let array = this.state.f
+                  let arrayString = array.toString();
+                  const { keyname, keyvalue } = SelectOBJ
+                  this.store.SaveSearchInfo(keyname, arrayString); 
                 }}
                 value={this.state.f}
               />
@@ -200,7 +254,10 @@ class HomeIndexRouter extends React.Component {
                   } if (SelectOBJ.action == "SPLICE") {
                     this.setState({ g: '' })
                   }
-                 
+                  let array = this.state.g
+                  let arrayString = array.toString();
+                  const { keyname, keyvalue } = SelectOBJ
+                  this.store.SaveSearchInfo(keyname, arrayString); 
                 }}
                 value={this.state.g}
               />
@@ -260,77 +317,83 @@ class HomeIndexRouter extends React.Component {
       b: JSON.parse(sessionStorage.getItem('Type')) || [],
       c: JSON.parse(sessionStorage.getItem('Size')) || [],
       d: JSON.parse(sessionStorage.getItem('WorkList')) || [],
+      d_1: JSON.parse(sessionStorage.getItem('WorkList_1')) || [],
+      d_2: JSON.parse(sessionStorage.getItem('WorkList_2')) || [],
       e: JSON.parse(sessionStorage.getItem('Light')) || [],
       f: JSON.parse(sessionStorage.getItem('CMANO')) || [],
       g: JSON.parse(sessionStorage.getItem('Area')) || [],
       h: JSON.parse(sessionStorage.getItem('More')) || [],
       TextNumberFace: [
-        { value: "钻石一", label: "", BgImg: './build/static/Size_1.png', BgImgs: './build/static/Size_1.1.png' },
-        { value: "钻石二", label: "", BgImg: './build/static/Size_2.png', BgImgs: './build/static/Size_2.2.png'},
-        { value: "钻石三", label: "", BgImg: './build/static/Size_3.png', BgImgs: './build/static/Size_3.3.png' },
-        { value: "钻石四", label: "", BgImg: './build/static/Size_4.png', BgImgs: './build/static/Size_4.4.png' },
-        { value: "钻石五", label: "", BgImg: './build/static/Size_5.png', BgImgs: './build/static/Size_5.5.png' },
-        { value: "钻石六", label: "", BgImg: './build/static/Size_6.png', BgImgs: './build/static/Size_6.6.png' },
-        { value: "钻石七", label: "", BgImg: './build/static/Size_7.png', BgImgs: './build/static/Size_7.7.png' },
-        { value: "钻石八", label: "", BgImg: './build/static/Size_8.png', BgImgs: './build/static/Size_8.8.png' },
-        { value: "钻石九", label: "", BgImg: './build/static/Size_9.png', BgImgs: './build/static/Size_9.9.png' },
-        { value: "钻石十", label: "", BgImg: './build/static/Size_10.png', BgImgs: './build/static/Size_10.10.png'}
+        { value: "ROUND", label: "",keyname:"shape",BgImg: './build/static/Size_1.png', BgImgs: './build/static/Size_1.1.png' },
+        { value: "PEAR", label: "", keyname: "shape", BgImg: './build/static/Size_2.png', BgImgs: './build/static/Size_2.2.png'},
+        { value: "HEART", label: "", keyname: "shape", BgImg: './build/static/Size_3.png', BgImgs: './build/static/Size_3.3.png' },
+        { value: "OVAL", label: "", keyname: "shape",BgImg: './build/static/Size_4.png', BgImgs: './build/static/Size_4.4.png' },
+        { value: "PILLOW", label: "", keyname: "shape", BgImg: './build/static/Size_5.png', BgImgs: './build/static/Size_5.5.png' },
+        { value: "EMERALD", label: "", keyname: "shape",BgImg: './build/static/Size_6.png', BgImgs: './build/static/Size_6.6.png' },
+        { value: "TRIANGLE", label: "", keyname: "shape", BgImg: './build/static/Size_7.png', BgImgs: './build/static/Size_7.7.png' },
+        { value: "PRINCESS", label: "", keyname: "shape", BgImg: './build/static/Size_8.png', BgImgs: './build/static/Size_8.8.png' },
+        { value: "RADIANT", label: "", keyname: "shape", BgImg: './build/static/Size_9.png', BgImgs: './build/static/Size_9.9.png' },
+        { value: "MARQUISE", label: "", keyname: "shape",BgImg: './build/static/Size_10.png', BgImgs: './build/static/Size_10.10.png'}
       ],
       TextNumberType: [
-        { value: "D", label: "D" },
-        { value: "E", label: "E" },
-        { value: "F", label: "F" },
-        { value: "G", label: "G" },
-        { value: "H", label: "H" },
-        { value: "I", label: "I" },
-        { value: "J", label: "J" },
-        { value: "K", label: "K" },
-        { value: "L", label: "L" },
-        { value: "M-N", label: "M-N" }
+        { value: "D", label: "D", keyname: "color", },
+        { value: "E", label: "E", keyname: "color" },
+        { value: "F", label: "F", keyname: "color" },
+        { value: "G", label: "G", keyname: "color"},
+        { value: "H", label: "H", keyname: "color" },
+        { value: "I", label: "I", keyname: "color" },
+        { value: "J", label: "J", keyname: "color" },
+        { value: "K", label: "K", keyname: "color"},
+        { value: "L", label: "L", keyname: "color" },
+        { value: "M-N", label: "M-N", keyname: "color" }
       ],
       TextNumberSize: [
-        { value: "IF", label: "IF" },
-        { value: "VVS1", label: "VVS1" },
-        { value: "VVS2", label: "VVS2" },
-        { value: "VS1", label: "VS1" },
-        { value: "VS2", label: "VS2" },
-        { value: "SI1", label: "SI1" },
-        { value: "SI2", label: "SI2" },
-        { value: "I1", label: "I1" },
-        { value: "I2", label: "I2" },
-        { value: "I3", label: "I3" }
+        { value: "IF", label: "IF", keyname: "clarity",},
+        { value: "VVS1", label: "VVS1", keyname: "clarity", },
+        { value: "VVS2", label: "VVS2", keyname: "clarity", },
+        { value: "VS1", label: "VS1", keyname: "clarity", },
+        { value: "VS2", label: "VS2", keyname: "clarity", },
+        { value: "SI1", label: "SI1", keyname: "clarity", },
+        { value: "SI2", label: "SI2", keyname: "clarity", },
+        { value: "I1", label: "I1", keyname: "clarity", },
+        { value: "I2", label: "I2", keyname: "clarity", },
+        { value: "I3", label: "I3", keyname: "clarity", }
       ],
       TextNumber_1: [
-        { value: "EX", label: "EX" },
-        { value: "VG", label: "VG" },
-        { value: "GD", label: "GD" },
-        { value: "FR", label: "FR" },
-        { value: "EX1", label: "EX" },
-        { value: "VG1", label: "VG" },
-        { value: "GD1", label: "GD" },
-        { value: "FR1", label: "FR" },
-        { value: "EX2", label: "EX" },
-        { value: "VG2", label: "VG" },
-        { value: "GD2", label: "GD" },
-        { value: "FR2", label: "FR" }
+        { value: "EX", label: "EX", keyname: "cut", },
+        { value: "V", label: "V",keyname: "cut", },
+        { value: "G", label: "G", keyname: "cut", },
+        { value: "F", label: "F", keyname: "cut", },
+      ],
+      TextNumber_1_1: [
+        { value: "EX", label: "EX", keyname: "polish", },
+        { value: "V", label: "V", keyname: "polish", },
+        { value: "G", label: "G", keyname: "polish", },
+        { value: "F", label: "F", keyname: "polish", },
+      ],
+      TextNumber_1_2: [
+        { value: "EX", label: "EX", keyname: "sym", },
+        { value: "V", label: "V", keyname: "sym", },
+        { value: "G", label: "G", keyname: "sym", },
+        { value: "F", label: "F", keyname: "sym", },
       ],
       Singer_1: [
-        { value: "N", label: "N" },
-        { value: "VSL", label: "VSL" },
-        { value: "F", label: "F" },
-        { value: "M", label: "M" },
+        { value: "N", label: "N", keyname: "flour", },
+        { value: "VSL", label: "VSL", keyname: "flour", },
+        { value: "F", label: "F", keyname: "flour", },
+        { value: "M", label: "M", keyname: "flour", },
       ],
       Singer_2: [
-        { value: "GIA", label: "GIA" },
-        { value: "VSL", label: "VSL" },
-        { value: "国检", label: "国检" },
-        { value: "HRD", label: "HRD" },
+        { value: "GIA", label: "GIA", keyname: "cert", },
+        { value: "VSL", label: "VSL", keyname: "cert", },
+        { value: "国检", label: "国检", keyname: "cert", },
+        { value: "HRD", label: "HRD", keyname: "cert", },
       ],
       Singer_3: [
-        { value: "香港", label: "香港" },
-        { value: "大陆", label: "大陆" },
-        { value: "印度", label: "印度" },
-        { value: "欧美", label: "欧美" },
+        { value: "香港", label: "香港", keyname: "location", },
+        { value: "大陆", label: "大陆", keyname: "location", },
+        { value: "印度", label: "印度", keyname: "location", },
+        { value: "欧美", label: "欧美", keyname: "location", },
       ],
       TextNumber_2: [
         { value: "优选", label: "优选", img: './build/static/Icon_1.png', imgs:'./build/static/Icon_1.1.png' },
@@ -341,14 +404,17 @@ class HomeIndexRouter extends React.Component {
     };
   }
   get submit(){
-    if (this.state.a==''){return false}
-    if (this.state.b == '') { return false }
-    if (this.state.c == '') { return false }
-    if (this.state.d == '') { return false }
-    if (this.state.e == '') { return false }
-    if (this.state.f == '') { return false }
-    if (this.state.g == '') { return false }
-    if (this.state.h == '') { return false }
+  
+    // if (this.state.a==''){return false}
+    // if (this.state.b == '') { return false }
+    // if (this.state.c == '') { return false }
+    // if (this.state.d == '') { return false }
+    // if (this.state.d_1 == '') { return false }
+    // if (this.state.d_2 == '') { return false }
+    // if (this.state.e == '') { return false }
+    // if (this.state.f == '') { return false }
+    // if (this.state.g == '') { return false }
+    // if (this.state.h == '') { return false }
   }
   LowWeight(e,value){
     this.setState({LW:value})
@@ -396,15 +462,14 @@ class HomeIndexRouter extends React.Component {
       c: { display: 'none' }
     }
   }
-  Reset(spanObj) {
+  Reset() {
     // this.props.history.go(0)
-    this.setState({ index: "0" });
-    this.setState({ book: "0" });
-    this.setState({ share: "0" });
     this.setState({ a: [] });
     this.setState({ b: [] });
     this.setState({ c: [] });
     this.setState({ d: [] });
+    this.setState({ d_1: [] });
+    this.setState({ d_2: [] });
     this.setState({ e: [] });
     this.setState({ f: [] });
     this.setState({ g: [] });
@@ -414,25 +479,44 @@ class HomeIndexRouter extends React.Component {
     this.setState({ CMANO: [] });
     this.setState({ LWMoney: '' });
     this.setState({ HWMoney: '' });
+    sessionStorage.removeItem('Face');
+    sessionStorage.removeItem('Type');
+    sessionStorage.removeItem('Size');
+    sessionStorage.removeItem('WorkList');
+    sessionStorage.removeItem('WorkList_1');
+    sessionStorage.removeItem('WorkList_2');
+    sessionStorage.removeItem('Light');
+    sessionStorage.removeItem('CMANO');
+    sessionStorage.removeItem('Area');
+    sessionStorage.removeItem('More');
   }
-  SubBtn(){
-    console.log('a'+':'+this.state.a.toString(),
-                'b' + ':' + this.state.b.toString(),
-                'c' + ':' + this.state.c.toString(),
-                'd' + ':' + this.state.d.toString(),
-                'e' + ':' + this.state.e.toString(),
-                'f' + ':' + this.state.f.toString(),
-                'g' + ':' + this.state.g.toString(),
-                'h' + ':' + this.state.h.toString(),
+  SubBtn = async() => {
+    try{
+      await this.store.getSearchState();
+    }catch(error){
+      throw error
+    }
+    console.log('A'+':'+this.state.a.toString(),
+                'B' + ':' + this.state.b.toString(),
+                'C' + ':' + this.state.c.toString(),
+                'D' + ':' + this.state.d.toString(),
+                'E' + ':' + this.state.e.toString(),
+                'F' + ':' + this.state.f.toString(),
+                'G' + ':' + this.state.g.toString(),
+                'H' + ':' + this.state.h.toString(),
                 'CMANO' + ':' + this.state.CMANO.toString(),
-                'weight'+':'+this.state.LW.toString()+'-'+this.state.HW.toString(),
-                'weight'+':'+this.state.LWMoney.toString()+'-'+this.state.HWMoney.toString(),
+                'Weight'+':'+this.state.LW.toString()+'-'+this.state.HW.toString(),
+                'Money'+':'+this.state.LWMoney.toString()+'-'+this.state.HWMoney.toString(),
 
     )
   }
   async componentDidMount() {
     document.title = "甄钻首页";
-    const resut = await this.store.getState();
+      try{
+    
+      }catch(error){
+        throw error
+      }
   }
 }
 

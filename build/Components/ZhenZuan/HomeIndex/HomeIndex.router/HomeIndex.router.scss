@@ -1,47 +1,12 @@
 @import "~publicStyle";
 @font-face {
   font-family: 'iconfont';  /* project id 927121 */
-  src: url('//at.alicdn.com/t/font_927121_u5iq4ipwvbd.eot');
-  src: url('//at.alicdn.com/t/font_927121_u5iq4ipwvbd.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_927121_u5iq4ipwvbd.woff') format('woff'),
-  url('//at.alicdn.com/t/font_927121_u5iq4ipwvbd.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_927121_u5iq4ipwvbd.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.eot');
+  src: url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.woff') format('woff'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.svg#iconfont') format('svg');
 }
-// .HomeTop{
-//    font-family: 'iconfont';
-//    display: flex;
-//    width: 100%;
-//    height: 45px;
-//    background: #fff;
-//    &>div{
-//      width: 33%;
-//      height: 100%;
-//      text-align: center;
-//      font-size: 24px;
-//      line-height: 45px;
-//      display: flex;
-//      align-items: center;
-//      justify-content: center;
-
-//      p{
-//         font-size: 14px;
-//         width: 100%;
-//         height: 24px;
-//         border-radius:30px;
-//         background: #f66;
-//         color: #fff;
-//         line-height: 24px;
-//        span{
-//           font-size: 14px;
-//        }
-//      }
-//    }
-//    .menu{
-//      text-align: left;
-//      justify-content:flex-start;
-//      margin-left: 5px;
-//    }
-// }
 .Content {
   width: 100%;
   height: 100%;
@@ -92,7 +57,8 @@
           background-repeat: no-repeat;
           background-position: center!important;
         }
-        & > div:nth-of-type(1) {
+        & > div:nth-of-type(7), & > div:nth-of-type(10) {
+          background-size: 20px 45px!important;
         }
       }
     }
@@ -148,6 +114,7 @@
       input{
         width: 100%;
         height: 100%;
+        text-align: center;
         border: none;
         outline: none;
       }
@@ -162,13 +129,14 @@
     }
     .WorkList {
       width: 100%;
-      height: 120px;
+      height: 125px;
       display: flex;
       flex-wrap: wrap;
       & > div {
         width: 100%;
         height: 100%;
         display: flex;
+         height: 40px;
         flex-wrap: wrap;
         & > div {
           width: 24%;
@@ -178,7 +146,7 @@
           align-items: center;
           background: #fbfbfb;
           justify-content: center;
-          border-left: 1px solid #eee;
+          border-right: 1px solid #eee;
           border-bottom: 1px solid #eee;
         }
         & > div:nth-last-of-type(1) {

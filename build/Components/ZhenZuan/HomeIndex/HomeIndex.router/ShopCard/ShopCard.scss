@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 927121 */
+  src: url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.eot');
+  src: url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.woff') format('woff'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.svg#iconfont') format('svg');
+}
+.ListBox{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.CardBottom{
+    width: 100%;
+    height:45px;
+    background: green;
+    display: flex;
+    justify-content: space-between;
+      font-family: 'iconfont';
+    .CardCheck{
+        width: 60%;
+        height: 100%;
+         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &>p{
+          span{
+            margin: 5px;
+            display:inline-block;
+            width: 21px;
+            height: 21px;
+            line-height: 21px;
+            border-radius:21px; 
+            font-size: 21px;
+            text-align: center;
+            background: #ddd;
+            color: #fff;
+          }
+        }
+    }
+    .CardOrder{
+        width: 30%;
+        height: 100%;
+        background: red;
+    }
+}

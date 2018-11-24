@@ -7,7 +7,7 @@ class ChildSingerList extends React.Component{
                 color:!this.isActive?"#000":"#fff",
                 backgroundColor: !this.isActive ? "#fff" : "red", 
                 backgroundImage: this.isActive ? `url(${BgImgs})` : `url(${BgImg})`,
-                backgroundSize: '60% 60%'         
+                backgroundSize: '30px'         
             }} 
                 onClick={this.handleClick}>
                     <span style={this.ComputedStyle}></span>
@@ -36,9 +36,9 @@ class ChildSingerList extends React.Component{
     handleClick=()=>{
         const { activeArray, value } = this.props
         if(!this.isActive){
-            this.props.onClick({ action: "PUSH", value: this.props.value })
+            this.props.onClick({ action: "PUSH", keyname:this.props.keyname, value: this.props.value })
         }else{
-            this.props.onClick({ action: "SPLICE", value: this.props.value })
+            this.props.onClick({ action: "SPLICE", keyname: this.props.keyname, value: this.props.value })
            
         }
         
