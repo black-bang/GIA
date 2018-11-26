@@ -109,29 +109,34 @@ class HomeIndexRouter extends React.Component {
               <span onClick={this.Money.bind(this)}>{"价格"}</span>
             </div>
             <div style={this.ComputedStyle.a} className="WatchNumber">
-              <Input type="number"
-              onChange={this.LowWeight.bind(this)}
+              <Input type="tel"
+                maxLength="5"
+                onChange={this.LowWeight.bind(this)}
                 value={this.state.LW}
               />
               <span>-</span>
-              <Input type="number"
+              <Input type="tel"
+                maxLength="5"
                 onChange={this.HeightWeight.bind(this)}
                 value={this.state.HW}
               />
             </div>
             <div style={this.ComputedStyle.b} className="WatchCMANO">
-              <Input type="text"
+              <Input type="tel"
+                maxLength="10"
                 onChange={this.CMANONumber.bind(this)}
                 value={this.state.CMANO}
               />
             </div>
             <div style={this.ComputedStyle.c} className="WatchMoney">
-              <Input type="number"
+              <Input type="tel"
+                maxLength="7"
                 onChange={this.LowMoney.bind(this)}
                 value={this.state.LWMoney}
               />
               <span>-</span>
-              <Input type="number"
+              <Input type="tel"
+                maxLength="7"
                 onChange={this.HeightMoney.bind(this)}
                 value={this.state.HWMoney}
               />
@@ -307,11 +312,11 @@ class HomeIndexRouter extends React.Component {
     this.query = url.parse(this.props.location.search, true)["query"];
     this.store = new HomeIndexRouterState();
     this.state = {
-      LW:'',
-      HW:'',
-      LWMoney:'',
-      HWMoney:'',
-      CMANO:'',
+      LW: sessionStorage.getItem('LW') || '',
+      HW: sessionStorage.getItem('HW') || '',
+      LWMoney: sessionStorage.getItem('LWMoney') || '',
+      HWMoney: sessionStorage.getItem('HWMoney') || '',
+      CMANO: sessionStorage.getItem('CMANOText') || '',
       flag:'0',
       a: JSON.parse(sessionStorage.getItem('Face')) ||[],
       b: JSON.parse(sessionStorage.getItem('Type')) || [],
@@ -345,7 +350,7 @@ class HomeIndexRouter extends React.Component {
         { value: "J", label: "J", keyname: "color" },
         { value: "K", label: "K", keyname: "color"},
         { value: "L", label: "L", keyname: "color" },
-        { value: "M-N", label: "M-N", keyname: "color" }
+        { value: "M", label: "M", keyname: "color" }
       ],
       TextNumberSize: [
         { value: "IF", label: "IF", keyname: "clarity",},
@@ -417,19 +422,24 @@ class HomeIndexRouter extends React.Component {
     // if (this.state.h == '') { return false }
   }
   LowWeight(e,value){
-    this.setState({LW:value})
+    this.setState({ LW: value});
+    sessionStorage.setItem('LW', value)
   }
   HeightWeight(e, value) {
-    this.setState({ HW: value })
+    this.setState({ HW: value });
+    sessionStorage.setItem("HW", value);
   }
   LowMoney(e,value){
-    this.setState({ LWMoney: value });
+    this.setState({ LWMoney: value.replace(/\D/g, '') });
+    sessionStorage.setItem('LWMoney', value.replace(/\D/g, ''))
   }
   HeightMoney(e,value){
-    this.setState({ HWMoney: value });
+    this.setState({ HWMoney: value.replace(/\D/g, '') });
+    sessionStorage.setItem('HWMoney', value.replace(/\D/g, ''))
   }
   CMANONumber(e,value){
-    this.setState({ CMANO: value })
+    this.setState({ CMANO: value.replace(/\D/g, '') }) 
+    sessionStorage.setItem("CMANOText", value.replace(/\D/g, '')); 
   }
 
   Weight(){
@@ -489,6 +499,11 @@ class HomeIndexRouter extends React.Component {
     sessionStorage.removeItem('CMANO');
     sessionStorage.removeItem('Area');
     sessionStorage.removeItem('More');
+    sessionStorage.removeItem("LW");
+    sessionStorage.removeItem("HW");
+    sessionStorage.removeItem("LWMoney");
+    sessionStorage.removeItem("LWMoney");
+    sessionStorage.removeItem("CMANOText");
   }
   SubBtn = async() => {
     try{

@@ -30,6 +30,11 @@ export default class HomeIndexRouterState {
              const result = yield ajax.post({
                  url:"/api/Diamonds/DiamondDataSearch",
                  data: Object.assign({
+                     diamondSizeMin:sessionStorage.getItem('LW') || '',
+                     diamondSizeMax: sessionStorage.getItem('HW') || '',
+                     reportNo: sessionStorage.getItem('CMANOText') || '',
+                     diamondPriceMin: sessionStorage.getItem('LWMoney') || '',
+                     diamondPriceMax: sessionStorage.getItem('HWMoney') || '',
                  }, this.Search)
              }) 
                  console.log(result)

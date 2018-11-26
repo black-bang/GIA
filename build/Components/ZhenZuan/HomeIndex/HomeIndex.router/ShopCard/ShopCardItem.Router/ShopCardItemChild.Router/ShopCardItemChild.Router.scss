@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 927121 */
+  src: url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.eot');
+  src: url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.woff') format('woff'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.svg#iconfont') format('svg');
+}
+.CardListItem {
+margin-bottom: 15px;
+background: #fff;
+  .Justify {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ListTop {
+    height: 30px;
+    width: 98%;
+    margin-left: 2%;
+    overflow: hidden;
+    line-height: 30px;
+    border-bottom: 1px solid #ddd;
+     font-family: 'iconfont';
+    .ListTopLeft {
+      span {
+        margin-left: 5px;
+      }
+      em {
+        font-style: normal;
+        font-size: 12px;
+        color: #ddd;
+        margin-left: 5px;
+      }
+    }
+    .ListTopRight {
+      height: 100%;
+      line-height: 30px;
+      span {
+        overflow: hidden;
+      }
+    }
+  }
+
+  .ListBottom {
+    width: 96%;
+    height: 100px;
+    margin: 0 2%;
+     font-family: 'iconfont';
+    .ListBottomLeft {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      .CardBtn{
+          width: 15%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span{
+              width: 18px;
+              height: 18px;
+              border-radius: 18px;
+              border: none;
+              line-height: 18px;
+              text-align: center;
+              background: #ddd;
+              color: #fff;
+          }
+      }
+      .ListBottomLeft_1 {
+        width: 25%;
+        height: 100%;
+        .Center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .Pic {
+          width: 45px;
+          height: 45px;
+          background: #F7F7F7;
+          border-radius: 5px;
+          margin: 5px 5px 5px 0;
+          span {
+            width: 30px;
+            height: 30px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+          }
+        }
+        .Location {
+          width: 45px;
+          height: 25px;
+          span {
+            line-height: 25px;
+          }
+        }
+        .Time {
+          width: 100%;
+          text-align: left;
+          height: 20px;
+          span {
+            line-height: 20px;
+            font-size: 12px;
+          }
+        }
+      }
+    .ListBottomLeft_2 {
+      width: 80%;
+      height: 100%;
+      .ListTitle {
+        width: 100%;
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight:'700';
+        overflow: hidden;
+        span{
+            color: #f66;
+            font-size: 14px;
+        }
+      }
+      & > p:nth-of-type(1) {
+        width: 100%;
+        height: 28px;
+        font-size: 14px;
+        line-height: 28px;
+         color: #5c5c5c;
+         overflow: hidden;
+      }
+      & > p:nth-of-type(2) {
+        width: 100%;
+        height: 20px;
+       line-height: 20px;
+        font-size: 12px;
+        color: #AEAEAE;
+        overflow: hidden;
+      }
+      .CMANO{
+        width: 100%;
+        height: 20px;
+        font-size: 14px;
+         color: #808080;
+         line-height: 20px;
+        display: flex;
+        justify-content: space-between;
+          span{
+                overflow: hidden;
+              }
+        &>div:nth-of-type(1){
+             &>span:nth-of-type(1){
+            text-decoration: underline;
+            margin-right: 3px;
+        }
+        }
+        &>div:nth-of-type(2){
+          
+        }
+    
+  
+      }
+    }
+    }
+.ListBottomRight{
+    color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    span{
+        text-align: center;
+        margin: 5px;
+    }
+}
+  }
+}
+.CardListItem:nth-of-type(1){
+  margin-top: 10px;
+}

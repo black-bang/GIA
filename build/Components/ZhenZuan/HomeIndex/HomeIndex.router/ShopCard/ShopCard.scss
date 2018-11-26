@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';  /* project id 927121 */
-  src: url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.eot');
-  src: url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.woff') format('woff'),
-  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_927121_74lwdg9jdb6.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_927121_5pt2vnfirq8.eot');
+  src: url('//at.alicdn.com/t/font_927121_5pt2vnfirq8.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_927121_5pt2vnfirq8.woff') format('woff'),
+  url('//at.alicdn.com/t/font_927121_5pt2vnfirq8.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_927121_5pt2vnfirq8.svg#iconfont') format('svg');
 }
 .ListBox{
     width: 100%;
@@ -14,10 +14,11 @@
 .CardBottom{
     width: 100%;
     height:45px;
-    background: green;
+    background: #fff;
     display: flex;
     justify-content: space-between;
       font-family: 'iconfont';
+      border-top:1px solid #ddd; 
     .CardCheck{
         width: 60%;
         height: 100%;
@@ -28,11 +29,11 @@
           span{
             margin: 5px;
             display:inline-block;
-            width: 21px;
-            height: 21px;
-            line-height: 21px;
-            border-radius:21px; 
-            font-size: 21px;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
+            border-radius:18px; 
+            font-size: 18px;
             text-align: center;
             background: #ddd;
             color: #fff;
@@ -43,5 +44,9 @@
         width: 30%;
         height: 100%;
         background: red;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        line-height: 45px;
     }
 }
